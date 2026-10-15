@@ -17,6 +17,9 @@ export default {
       maxWidth: {
         site: '1200px', // 内容最大宽度
       },
+      boxShadow: {
+        glow: '0 0 40px rgba(108, 140, 255, 0.45)', // 头像发光边框（强调色带透明度）
+      },
     },
   },
   plugins: [],
