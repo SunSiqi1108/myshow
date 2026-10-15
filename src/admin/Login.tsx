@@ -17,7 +17,8 @@ export default function Login() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (login(username.trim(), password)) {
+    // 账号密码都去除首尾空白，避免输入法/自动填充带入空格导致校验失败
+    if (login(username.trim(), password.trim())) {
       navigate('/admin', { replace: true })
     } else {
       setError('账号或密码错误')
