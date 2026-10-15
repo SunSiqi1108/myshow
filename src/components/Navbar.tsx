@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { to: '/', label: '首页' },
   { to: '/about', label: '关于' },
   { to: '/projects', label: '项目' },
+  { to: '/skills', label: '技能' },
   { to: '/blog', label: '博客' },
   { to: '/contact', label: '联系' },
 ]
