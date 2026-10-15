@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局深色主题变量（与 tailwind.config 中的颜色保持一致） */
+:root {
+  --color-base: #0b0f1a;
+  --color-card: #121828;
+  --color-ink: #e6eaf2;
+  --color-muted: #9aa4b8;
+  --color-accent: #6c8cff;
+}
+
+html {
+  scroll-behavior: smooth; /* 锚点平滑滚动 */
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-ink);
+  font-family: system-ui, -apple-system, 'Segoe UI', 'PingFang SC',
+    'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 统一动效缓动时长 0.2s-0.3s */
+.transition-fast {
+  transition: all 0.2s ease;
+}
