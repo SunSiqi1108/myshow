@@ -7,6 +7,7 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Skills from './pages/Skills'
 import Blog from './pages/Blog'
+import PostDetail from './pages/PostDetail'
 import Contact from './pages/Contact'
 
 // 前台路由：星空背景 + 导航 + 页面 + 页脚的整体布局
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<PostDetail />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
