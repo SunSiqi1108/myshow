@@ -4,10 +4,10 @@ export interface Profile {
   name: string
   title: string
   bio: string
-  avatar: string // base64
-  resume: string // base64 PDF
+  avatar: string // base64，为空时显示默认头像占位
+  resume: string // base64 PDF，为空时下载按钮不可用
   email: string
-  socials: { label: string; url: string }[]
+  github: string
 }
 
 export interface Skill {

@@ -1,3 +1,6 @@
+import { useMemo } from 'react'
+import { getProfile } from '../api/profile'
+
 // 时间线条目类型（后续迁移到 api/profile 层的经历数据）
 interface TimelineItem {
   date: string
@@ -25,16 +28,19 @@ const TIMELINE: TimelineItem[] = [
 ]
 
 // 关于页：个人简介 + 经历时间线 + 教育背景
+// 简介来自 profile API（localStorage），后台修改后刷新即生效
 export default function About() {
+  const profile = useMemo(() => getProfile(), [])
+
   return (
     <div className="mx-auto max-w-site px-4 py-16 sm:px-6 sm:py-20">
       <h1 className="text-3xl font-bold sm:text-4xl">关于我</h1>
 
-      {/* 个人简介：第一人称一段话 */}
+      {/* 个人简介：来自 profile API */}
       <section className="mt-10">
         <h2 className="text-xl font-semibold text-accent">个人简介</h2>
         <p className="mt-4 max-w-3xl leading-loose text-muted">
-          我是一名计算机科学与技术专业的学生，热衷AI应用与前端开发，喜欢用AI工具把想法快速变成真实作品。从浏览器插件到全栈摘要工具，我做过多个AI辅助的实战项目，并在一次次从0到1的实践中，持续打磨自己的工程能力与产品思维。
+          我是{profile.name}，{profile.title}，{profile.bio}。
         </p>
       </section>
 
