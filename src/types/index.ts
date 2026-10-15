@@ -36,3 +36,11 @@ export interface Post {
   date: string
   content: string // Markdown
 }
+
+export interface Message {
+  id: string
+  name: string
+  email: string
+  content: string
+  date: string // ISO 时间字符串
+}
